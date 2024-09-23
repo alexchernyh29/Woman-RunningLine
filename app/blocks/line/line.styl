@@ -1,0 +1,44 @@
+.line
+    position relative
+    width 100%
+    height 100%
+
+    &__marquee 
+        overflow hidden
+        white-space nowrap
+        box-sizing border-box
+        background-color transparent
+        padding w(33) 0
+        position relative
+        +below(768px)
+            padding wm(33) 0
+
+#marquee-text {
+    display inline-block
+    padding-left 5%
+    animation marquee 150s linear infinite
+    font-family $ff-drukwidecyr-bold
+    font-size w(35)
+    font-weight 700
+    line-height w(39)
+    color $c-green
+}
+
+@media (max-width:768px) {
+        #marquee-text {
+            display inline-block
+            padding-left 5%
+            animation marquee 150s linear infinite
+            font-family $ff-drukwidecyr-bold
+            font-size wm(35)
+            font-weight 700
+            line-height wm(39)
+            color $c-green
+    }
+
+}
+
+@keyframes marquee {
+    0% { transform: translate(0); }
+    100% { transform: translate(-100%); }
+}
